@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("btn1").onclick = function () {
+                var elementById = document.getElementById("myDiv2");
+                var flag = elementById.hasChildNodes();
+                console.log(flag);
+            };
+            document.getElementById("myDiv").onclick = function () {
+                var fu = document.getElementById("myDiv");
+                var zi = document.getElementById("mySpan");
+                fu.removeChild(zi);
+            };
+            document.getElementById("btn3").onclick = function () {
+                var fu = document.getElementById("myDiv");
+                var zi = document.createElement("span");
+                fu.appendChild(zi);
+            };
+        };
+    </script>
+</head>
+<body>
+<h2>父子元素操作</h2>
+<hr />
+<h3>操作按钮</h3>
+<button id="btn1">单击btn1，判断id="myDiv"的标签是否有子节点</button><br />
+<button id="btn2">单击btn2，删除id="myDiv"下的子标签</button><br />
+<button id="btn3">单击btn3，创建一个新的span，追加到id="myDiv"内部后面</button><br />
+
+<div id="myDiv">
+    传智<span id="mySpan">播客</span>
+</div>
+<div id="myDiv2"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">点击按钮,干掉这杯鸡汤.</button>
+<hr>
+<div id="myDiv">
+    <font color="red">最美的事不是留住时光,而是留住记忆.</font> <br>
+    <font color="green">真正的强大,不是原谅别人,而是放过自己.</font>
+</div>
+<script>
+    document.getElementById("btn").onclick = function () {
+        document.getElementById("myDiv").remove();
+    };
+</script>
+</body>
+</html>

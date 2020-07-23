@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getElem() {
+            var arrElem = document.getElementsByTagName("div");
+            for (let i = 0; i < arrElem.length; i++) {
+                const argument = arrElem[i];
+                console.log(argument);
+            }
+        }
+    </script>
+</head>
+<body onload="getElem()">
+<div id="myDiv1">div1</div>
+<div id="myDiv2">div2</div>
+<div id="myDiv3">div3</div>
+<div id="myDiv4">div4</div>
+</body>
+</html>

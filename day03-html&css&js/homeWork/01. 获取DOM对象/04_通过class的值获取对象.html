@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="myDiv">div1</div>
+<div class="myDiv">div2</div>
+<div class="myDiv">div3</div>
+<div class="myDiv">div4</div>
+<div>div5</div>
+<div>div6</div>
+<div>div7</div>
+<div>div8</div>
+<script>
+    var arrElem = document.getElementsByClassName("myDiv");
+    for (let i = 0; i < arrElem.length; i++) {
+        const arrElemElement = arrElem[i];
+        console.log(arrElemElement);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("uName").onblur = function () {
+                alert("失去焦点。。。");
+            };
+        };
+    </script>
+</head>
+<body>
+<form action="#">
+    用户名：<input type="text" name="username" id="uName"/><br/>
+    密码：<input type="password" name="pwd" id="pwd"/><br/>
+    <input type="submit" value="注册"/>
+</form>
+</body>
+</html>

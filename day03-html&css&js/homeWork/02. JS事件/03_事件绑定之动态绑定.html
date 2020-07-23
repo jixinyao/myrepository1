@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="myButton">动态</button>
+<script>
+    var buttonElement = document.getElementById("myButton");
+    var count = 1;
+    buttonElement.onclick = function () {
+        alert("点击低" + count++ + "次");
+    };
+</script>
+</body>
+</html>

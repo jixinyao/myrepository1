@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var count = 1;
+        setInterval(function () {
+            document.getElementById("img").src = "../../html&css/img/banner_"+(count % 3 + 1)+".jpg" ;
+            count ++;
+        },2000);
+    </script>
+</head>
+<body>
+<img width="100%" id="img" src="../../html&css/img/banner_3.jpg">
+</body>
+</html>

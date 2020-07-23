@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            //用户名离焦事件
+            var usernameElem = document.getElementById("username");
+            var usernamesgElem = document.getElementById("username_msg");
+            usernameElem.onblur = function () {
+                var username = usernameElem.value;
+                if (username) {
+                    usernamesgElem.innerHTML = "<font color='green'>√</font>";
+                }else {
+                    usernamesgElem.innerHTML = "<font color='red'>X</font>";
+                }
+            };
+            //密码离焦事件
+            var passwordElem = document.getElementById("password");
+            var passwordsgElem = document.getElementById("password_msg");
+            passwordElem.onblur = function () {
+                var password = passwordElem.value;
+                if (password) {
+                    passwordsgElem.innerHTML = "<font color='green'>√</font>";
+                }else {
+                    passwordsgElem.innerHTML = "<font color='red'>X</font>";
+                }
+            };
+            //提交事件
+            document.getElementById("registForm").onsubmit = function () {
+                var username = usernameElem.value;
+                var password = passwordElem.value;
+                var flag1 = false;
+                if (username){
+                    flag1 = true;
+                }else {
+                    usernamesgElem.innerHTML = "<font color='red'>请输入用户名</font>";
+                }
+                var flag2 = false;
+                if (password) {
+                    flag2 =true;
+                } else {
+                    passwordmsgElem.innerHTML = "<font color='red'>请输入密码</font>";
+                }
+                return flag1 && flag2;
+            };
+        };
+    </script>
+</head>
+<body>
+<h2 align="center">注册表单校验</h2>
+<form action="#" method="get" id="registForm">
+    <table  height="60%"  align="center" bgcolor="#ffffff">
+        <tr>
+            <td colspan="3">会员注册USER REGISTER</td>
+        </tr>
+        <tr>
+            <td width="20%">用户名:</td>
+            <td width="40%"><input type="text" name="username" id="username"></td>
+            <td width="40%"><span id="username_msg"></span></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password" id="password"></td>
+            <td><span id="password_msg"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="注册" />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
